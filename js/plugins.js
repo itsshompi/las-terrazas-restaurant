@@ -7,14 +7,14 @@ $(window).load(function() {
 });
 
 $(document).ready(function(){
-	
-	
+
+
 	//dragable mobile
 	var drag;
-	if($(window).width()<796){drag=false;}else{drag=true;}	
-	
+	if($(window).width()<796){drag=false;}else{drag=true;}
+
 	/* Color Picker */
-	
+
 	  //demo
 	 jQuery('.picker-btn').click(function(){
 	  if(jQuery('.color-picker').css('right')=='0px'){
@@ -26,9 +26,9 @@ $(document).ready(function(){
     setTimeout(function(){
     jQuery('.color-picker').animate({ "right": "-223px" }, "slow" );}, 4000);
 
- 
-    
-	
+
+
+
 	var currentColor = 'gold';
 	$('body').addClass(currentColor);
 
@@ -98,7 +98,7 @@ $(document).ready(function(){
 	$('.light-version').click(function(){
 		$('body').removeClass('darker');
 	});
-	
+
 	/* googleMaps Footer Map */
 		var bluegray = "#768FAC"
 		var wine = "#B95D82"
@@ -146,8 +146,8 @@ $(document).ready(function(){
                 var color = wine;
 				var saturation = 100;
                 break;
-        }	
-		var latlng = new google.maps.LatLng(40.712503557180824,-74.00073790361023); <!-- (Fist Value Longitude, Second Value Latitude), can obtain YOUR coordenates here!: http://universimmedia.pagesperso-orange.fr/geo/loc.htm -->
+        }
+		var latlng = new google.maps.LatLng(-36.5982472,-72.9758486); <!-- (Fist Value Longitude, Second Value Latitude), can obtain YOUR coordenates here!: http://universimmedia.pagesperso-orange.fr/geo/loc.htm -->
 		var styles = [
 			{
 				"featureType": "landscape",
@@ -203,7 +203,7 @@ $(document).ready(function(){
 					{"gamma": 1}
 				]
 			}
-		];		
+		];
 		var options = {
 		 center : latlng,
 		 mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -217,7 +217,7 @@ $(document).ready(function(){
 		 styles: styles
 		};
 		var wpgmappitymap = new google.maps.Map(document.getElementById('wpgmappitymap'), options);
-		var point0 = new google.maps.LatLng(40.712503557180824,-74.00073790361023); <!-- (Fist Value Longitude, Second Value Latitude), can obtain YOUR coordenates here!: http://universimmedia.pagesperso-orange.fr/geo/loc.htm -->
+		var point0 = new google.maps.LatLng(-36.5982472,-72.9758486); <!-- (Fist Value Longitude, Second Value Latitude), can obtain YOUR coordenates here!: http://universimmedia.pagesperso-orange.fr/geo/loc.htm -->
 		var marker0= new google.maps.Marker({
 		 position : point0,
 		 map : wpgmappitymap,
@@ -233,10 +233,10 @@ $(document).ready(function(){
 		window.onload = function() {
 		 wpgmappity_maps_loaded();
 		};
-	
-	
-	
 
-		
+
+
+
+
 	/* End */
 });
