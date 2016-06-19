@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['email'])){
-		$mailTo = "lasterrazass@hotmail.com";
+		$mailTo = "francisconicolas.villegas@gmail.comm";
 		$subject = "Mensaje via Web Las Terrazas";
 		$body = "Nuevo mensaje
 <br><br>
@@ -11,7 +11,7 @@ COMMENTS: ".$_POST['message']."<br>";
 		$headers .= "From: ".$_POST['author']." <".$_POST['email'].">\r\n";
 		$headers .='X-Mailer: PHP/' . phpversion();
     $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";   
+    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n";
 		//envio destinatario
 		$mail_success =  mail($mailTo, utf8_decode($subject), utf8_decode($body), $headers);
 }
