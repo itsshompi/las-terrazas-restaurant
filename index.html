@@ -14,6 +14,7 @@
     <meta name="robots" content="index, follow" />
 
     <!-- CSS STYLESHEETS -->
+
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
  	<link rel="stylesheet" href="css/elixir.css" />
@@ -73,15 +74,21 @@
         <!-- BEGIN HOME SLIDER SECTION -->
         <section id="home-slider">
             <div class="overlay"></div>
-            <video class="fullscreen-bg video" autoplay  poster="./images/slider/01.jpg" id="bgvid" loop muted>
-              <source src="./images/video.mp4" type="video/mp4">
-            </video>
-
+            <div id="div-video" class="hide">
+              <video class="fullscreen-bg video" autoplay  poster="./images/slider/01.jpg" id="bgvid" loop muted>
+                <source src="./images/video.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div id="owl-main" class="owl-carousel">
+                <div class="item"><img src="images/slider/01.jpg" alt="Slide 01"></div>
+                <div class="item"><img src="images/slider/02.jpg" alt="Slide 02"></div>
+                <div class="item"><img src="images/slider/03.jpg" alt="Slide 03"></div>
+            </div>
 
             <div class="slide-content">
                 <div class="voffset100"></div>
                 <div class="text-center">
-                  <img src="./images/logo-in.png" alt="" width="500px"/>
+                  <img src="./images/logo-in.png" alt="" class="logo-t"/>
                 </div>
                 <div id="owl-main-text" class="owl-carousel">
                     <div class="item">
@@ -614,11 +621,17 @@
     <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
     <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.swipebox.js"></script>
-
     <script type="text/javascript">
     ;( function( $ ) {
 
         $( '.swipebox' ).swipebox();
+        if($('#home-slider').width() > 756){
+          $('#div-video').removeClass('hide');
+          $('#owl-main').addClass('hide');
+        }else{
+          $('#div-video').addClass('hide');
+          $('#owl-main').removeClass('hide');
+        }
 
     } )( jQuery );
     </script>
